@@ -133,6 +133,12 @@ tokenizer_abinitmp_log <- function() {
 
 #' @export
 #' @rdname Tokenizers
+tokenizer_abinitmp_cpf <- function() {
+  structure(list(), class = "tokenizer_abinitmp_cpf")
+}
+
+#' @export
+#' @rdname Tokenizers
 #' @param begin,end Begin and end offsets for each file. These are C++
 #'   offsets so the first column is column zero, and the ranges are
 #'   [begin, end) (i.e inclusive-exclusive).

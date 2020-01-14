@@ -1,6 +1,6 @@
 Package: readr
 Title: Read Rectangular Text Data
-Version: 1.3.1.9000
+Version: 1.3.1.9100
 Authors@R: 
     c(person(given = "Hadley",
              family = "Wickham",
@@ -62,5 +62,5 @@ VignetteBuilder:
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 SystemRequirements: GNU make

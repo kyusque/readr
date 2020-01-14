@@ -8,6 +8,7 @@ using namespace Rcpp;
 #include "TokenizerLog.h"
 #include "TokenizerWs.h"
 #include "TokenizerAbinitmpLog.h"
+#include "TokenizerAbinitmpCpf.h"
 
 TokenizerPtr Tokenizer::create(List spec) {
   std::string subclass(as<CharacterVector>(spec.attr("class"))[0]);
@@ -51,6 +52,8 @@ TokenizerPtr Tokenizer::create(List spec) {
     return TokenizerPtr(new TokenizerLog());
   } else if (subclass == "tokenizer_abinitmp_log") {
     return TokenizerPtr(new TokenizerAbinitmpLog());
+  } else if (subclass == "tokenizer_abinitmp_cpf") {
+    return TokenizerPtr(new TokenizerAbinitmpCpf());
   } else if (subclass == "tokenizer_ws") {
     std::vector<std::string> na = as<std::vector<std::string> >(spec["na"]);
     std::string comment = as<std::string>(spec["comment"]);
